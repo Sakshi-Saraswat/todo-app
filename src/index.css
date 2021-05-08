@@ -40,8 +40,21 @@ div hr {
 .fa-thumbs-down{
  color: red;
 }
+.fa-thumbs-up{
+  color:green;
+}
+
+.division{
+  text-align: left;
+}
+.align{
+  display:inline;
+  
+}
 
 li{
+  display:inline;
+  margin:0px 18px;
   font-size:x-large;
   list-style: none;
   color: rgb(85, 22, 85);

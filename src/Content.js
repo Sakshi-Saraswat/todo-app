@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import ToDoLst from './ToDoLst';
 
 const Content=() =>{
     const [item,setItem] = useState(" ");
@@ -12,10 +13,8 @@ const Content=() =>{
             return [...prevValue,item];
         });
     };
-    var [clicked,setIsClicked]=useState(false);
-    function complete(){
-        setIsClicked(true);
-    };
+    
+    
     
     return (
         <>
@@ -24,13 +23,13 @@ const Content=() =>{
             <button className="size" onClick={listOfItem}>+</button>
             <hr></hr>
             <ul>
-                {newitem.map((val,index)=>{
-                    return <li className="set" style={{textDecoration: clicked ? "line-through" : "none"}}>
-                        <input type="checkbox" onClick={complete}></input> {val} <i class="fa fa-thumbs-down" aria-hidden="true"></i></li>;
-                     
+                {newitem.map((val)=>{
+                    return <ToDoLst text={val} />;
+                    
                 })}
                 
             </ul>
+           
         </div>
        
        
